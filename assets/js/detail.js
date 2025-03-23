@@ -125,8 +125,8 @@ fetchDataFromServer(
           </div>
 
           <div class="banner">
-            <a href="./detail.html" class="btn">
-             <img src="./assets/images/play_circle.png" width="24" height="24" aria-hidden="true" alt="play circle"><span class="span">Watch Now</span>
+            <a href="#" class="btn" onclick="og_load();">
+             <img src="./assets/images/play_circle.png" width="24" height="24" aria-hidden="true" alt="play circle"><span class="span">Play Movie</span>
            </a>
         
           </div>
