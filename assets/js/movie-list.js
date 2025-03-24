@@ -29,7 +29,7 @@ fetchDataFromServer(
 
     movieListElem.innerHTML = `
     <div class="title-wrapper">
-      <h1 class="heading">All ${genreName} Movies</h1>
+      <h1 class="heading">All  Movies</h1>
     </div>
     
     <div class="grid-list"></div>
