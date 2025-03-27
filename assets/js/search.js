@@ -26,35 +26,36 @@ export function search() {
     clearTimeout(searchTimeout);
 
     searchTimeout = setTimeout(() => {
-      const movieUrl = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${searchField.value}&page=1&include_adult=false`;
-      const tvShowUrl = `https://api.themoviedb.org/3/search/tv?api_key=${api_key}&query=${searchField.value}&page=1&include_adult=false`;
+      const multiSearchUrl = `https://api.themoviedb.org/3/search/multi?api_key=${api_key}&query=${searchField.value}&page=1&include_adult=false`;
 
-      Promise.all([
-        fetch(movieUrl).then(res => res.json()),
-        fetch(tvShowUrl).then(res => res.json())
-      ]).then(([movieData, tvShowData]) => {
-        searchWrapper.classList.remove("searching");
-        searchResultModal.classList.add("active");
-        searchResultModal.innerHTML = ""; // Clear old results
+      fetch(multiSearchUrl)
+        .then(res => res.json())
+        .then(data => {
+          searchWrapper.classList.remove("searching");
+          searchResultModal.classList.add("active");
+          searchResultModal.innerHTML = ""; // Clear old results
 
-        searchResultModal.innerHTML = `
-          <p class="label">Results for</p>
-          <h1 class="heading">${searchField.value}</h1>
-          <div class="movie-list">
-            <div class="grid-list"></div>
-          </div>
-        `;
+          searchResultModal.innerHTML = `
+            <p class="label">Results for</p>
+            <h1 class="heading">${searchField.value}</h1>
+            <div class="movie-list">
+              <div class="grid-list"></div>
+            </div>
+          `;
 
-        for (const movie of movieData.results) {
-          const movieCard = createMovieCard(movie);
-          searchResultModal.querySelector(".grid-list").appendChild(movieCard);
-        }
-
-        for (const show of tvShowData.results) {
-          const tvShowCard = createTvShowCard(show);
-          searchResultModal.querySelector(".grid-list").appendChild(tvShowCard);
-        }
-      }).catch(error => console.error("Error fetching search results:", error));
+          for (const item of data.results) {
+            let card;
+            if (item.media_type === "movie") {
+              card = createMovieCard(item);
+            } else if (item.media_type === "tv") {
+              card = createTvShowCard(item);
+            }
+            if (card) {
+              searchResultModal.querySelector(".grid-list").appendChild(card);
+            }
+          }
+        })
+        .catch(error => console.error("Error fetching search results:", error));
     }, 500);
   });
 }
