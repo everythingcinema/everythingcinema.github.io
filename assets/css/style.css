@@ -933,37 +933,48 @@ body {
   color: var(--white) !important; /* Makes the text white */
   font-weight: bold;
 }
+/* General styles for the sidebar footer */
+.sidebar-footer {
+  text-align: center;
+  padding: 15px;
+  background-color: inherit;
+  color: white;
+}
+
+/* Social media icons container */
 .social-media-icons {
   display: flex;
-  justify-content: center;  /* Center the icons */
-  align-items: center;  /* Align items vertically */
-  margin-top: 10px;  /* Optional, adds some space between footer text and icons */
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
 }
 
-.social-media-icons a {
+/* Individual social media icon links */
+.social-icon {
   color: white;
-  margin: 0 15px;  /* Adds space between icons */
-  font-size: 18px;  /* Smaller icon size */
-  text-decoration: none;  /* Remove underline */
+  font-size: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.social-media-icons a:hover {
-  opacity: 0.7;  /* Add hover effect */
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #ff0000;
 }
-/* Responsive behavior for mobile screens */
-@media (max-width: 768px) {
+
+/* Ensure icons are properly visible in the sidebar */
+.sidebar .social-media-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Responsive Design Adjustments */
+@media screen and (max-width: 768px) {
   .social-media-icons {
-    justify-content: space-around;
-    padding: 10px 0;
+    flex-direction: row;
+    justify-content: center;
   }
-
   .social-icon {
-    font-size: 1.2rem; /* Smaller size on mobile */
+    font-size: 18px;
   }
 }
-/* Reduce the font size of the "Everything Cinema" text */
-.sidebar-footer .copyright {
-  font-size: 15px; /* Reduce font size for small screen and overall */
-}
-
-
