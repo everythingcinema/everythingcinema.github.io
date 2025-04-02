@@ -44,7 +44,13 @@ export function sidebar() {
         onclick='getMovieList("with_original_language=zh", "Mandarin")'>Mandarin</a>
     </div>
     <div class="sidebar-footer">
-      <p class="copyright">© 2025 Everything Cinema</p>
+      <p class="copyright">&copy; Everything Cinema</p>
+      <div class="social-media-icons">
+        <a href="https://www.tiktok.com" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+      </div>
     </div>
   `;
 
