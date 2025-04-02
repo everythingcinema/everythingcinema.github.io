@@ -933,4 +933,37 @@ body {
   color: var(--white) !important; /* Makes the text white */
   font-weight: bold;
 }
+.social-media-icons {
+  display: flex;
+  justify-content: center;  /* Center the icons */
+  align-items: center;  /* Align items vertically */
+  margin-top: 10px;  /* Optional, adds some space between footer text and icons */
+}
+
+.social-media-icons a {
+  color: white;
+  margin: 0 15px;  /* Adds space between icons */
+  font-size: 18px;  /* Smaller icon size */
+  text-decoration: none;  /* Remove underline */
+}
+
+.social-media-icons a:hover {
+  opacity: 0.7;  /* Add hover effect */
+}
+/* Responsive behavior for mobile screens */
+@media (max-width: 768px) {
+  .social-media-icons {
+    justify-content: space-around;
+    padding: 10px 0;
+  }
+
+  .social-icon {
+    font-size: 1.2rem; /* Smaller size on mobile */
+  }
+}
+/* Reduce the font size of the "Everything Cinema" text */
+.sidebar-footer .copyright {
+  font-size: 15px; /* Reduce font size for small screen and overall */
+}
+
 
