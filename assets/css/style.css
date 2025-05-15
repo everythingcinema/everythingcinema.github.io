@@ -589,11 +589,11 @@ body {
 }
 
 .banner .btn {
-  background-color: var(--primary);
+  background-color: #2a9aa2;
 }
 
 .banner .btn:is(:hover, :focus-visible) {
-  box-shadow: var(--shadow-2);
+  box-shadow: #fff;
 }
 
 .slider-control {
