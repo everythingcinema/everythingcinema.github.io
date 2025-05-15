@@ -220,20 +220,6 @@ body {
   gap: 4px;
 }
 
-.btn {
-  color: var(--white);
-  font-size: var(--fs-button);
-  font-weight: var(--weight-bold);
-  max-width: max-content;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding-block: 12px;
-  padding-inline: 20px 24px;
-  border-radius: var(--radius-8);
-  transition: var(--transition-short);
-}
-
 .card-badge {
   background-color: var(--banner-background);
   color: var(--white);
@@ -978,3 +964,141 @@ body {
     font-size: 18px;
   }
 }
+/* Player Styling */
+#videoPlayer {
+  height: 35vw;
+}
+
+#movieIframe {
+  height: 35vw;
+}
+
+#seriesIframe {
+  height: 35vw;
+}
+
+@media (width < 650px) {
+  #videoPlayer {
+    height: 55vw;
+  }
+
+  #movieIframe {
+    height: 55vw;
+  }
+
+  #seriesIframe {
+    height: 55vw;
+  }
+}
+
+/* Button Styling */
+#buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  margin-top: 2%;
+  width: max-content;
+  margin-left: 11px;
+  font-weight: 800;
+  display: flex;
+  padding-inline: 20px 24px;
+  align-items: center;
+  height: 3.5vw;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2vw;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #f7f4f4;
+  border: none;
+  border-radius: 1.1rem;
+  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  background-size: 300% 100%;
+  background-image: linear-gradient(to right, #14375f, #0f1e2d, #2b5876, #4e4376);
+  
+}
+
+.btn:hover {
+  background-color: #2a9aa2;
+  box-shadow: 0px 5px 20px rgba(91, 162, 167, 0.73);
+  color: #fff;
+  transform: translateY(-7px);
+  background-position: 100% 0;
+  transition: all .4s ease-in-out;
+}
+.markdown-div {
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.6;
+  padding: 1em;
+  max-width: 100%;
+  overflow-x: auto;
+  box-sizing: border-box;
+}
+
+.markdown-div h1 {
+  font-size: 1.5em;
+}
+
+.markdown-div h2 {
+  font-size: 1.3em;
+}
+
+.markdown-div h3 {
+  font-size: 1.1em;
+}
+
+.markdown-div code {
+  background-color: #1f121200;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+  font-size: 0.95rem;
+}
+
+.markdown-div pre {
+  background-color: #07112e;
+  padding: 1em;
+  border-radius: 0.5em;
+  overflow: auto;
+  font-size: 0.9rem;
+}
+
+.markdown-div ul,
+.markdown-div ol {
+  margin-top: 0;
+  padding-left: 1.5em;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .markdown-div {
+    padding: 0.75em;
+  }
+
+  .markdown-div h1 {
+    font-size: 1.3em;
+  }
+
+  .markdown-div h2 {
+    font-size: 1.1em;
+  }
+
+  .markdown-div h3 {
+    font-size: 1em;
+  }
+
+  .markdown-div code {
+    font-size: 0.85rem;
+    word-break: break-word;
+  }
+
+  .markdown-div pre {
+    font-size: 0.8rem;
+  }
+}
+
+
+
