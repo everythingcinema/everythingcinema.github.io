@@ -1,0 +1,9 @@
+https://api.themoviedb.org/3/movie/${movieId}?api_key=${api_key}&append_to_response=casts,videos,images,releases
+https://api.themoviedb.org/3/movie/${movieId}/recommendations?api_key=${api_key}&page=1
+https://api.themoviedb.org/3/genre/movie/list?api_key=${api_key}
+https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&page=1
+https://api.themoviedb.org/3${path}?api_key=${api_key}&page=1
+https://api.themoviedb.org/3/discover/movie?api_key=${api_key}&sort_by=popularity.desc&include_adult=false&page=${currentPage}&${urlParam}
+https://api.themoviedb.org/3/discover/movie?api_key=${api_key}&sort_by=popularity.desc&include_adult=false&page=${currentPage}&${urlParam}
+https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${searchField.value}&page=1&include_adult=false
+https://api.themoviedb.org/3/genre/movie/list?api_key=${api_key}
