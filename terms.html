@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terms of Use - EverythingCinema</title>
+  <meta name="description" content="Read the Terms of Use for EverythingCinema, your free streaming platform for movies and TV shows." />
+  <meta name="keywords" content="Terms of Use, EverythingCinema, free streaming, legal, policies" />
+  <link rel="shortcut icon" href="./logo.png" type="image/svg+xml" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <script src="./assets/js/global.js" defer></script>
+  <script src="./assets/js/index.js" type="module"></script>
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'DM Sans', sans-serif;
+      background: linear-gradient(135deg, #121212, #1f1f1f);
+      color: #f1f1f1;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      color: #e50914;
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+    a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -3px;
+      left: 0;
+      background-color: #e50914;
+      transition: width 0.3s ease;
+    }
+    a:hover, a:focus {
+      color: #ff1a1a;
+      outline: none;
+      text-shadow: 0 0 8px #ff1a1a;
+    }
+    a:hover::after, a:focus::after {
+      width: 100%;
+    }
+
+    .logo::after {
+      display: none !important;
+    }
+
+    header.header {
+      padding: 28px 56px;
+      background-color: #181818;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+      z-index: 10;
+    }
+    header.header .logo img {
+      width: 160px;
+      height: auto;
+      filter: drop-shadow(0 0 4px #e5091455);
+    }
+
+    main {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      padding: 3rem 1rem 5rem;
+    }
+
+    .terms-wrapper {
+      max-width: 850px;
+      width: 100%;
+      background: rgba(30,30,30,0.85);
+      border-radius: 14px;
+      padding: 3rem 3rem 4rem;
+      box-shadow: 0 12px 30px rgba(229, 9, 20, 0.4);
+      backdrop-filter: saturate(180%) blur(12px);
+      animation: fadeInUp 0.8s ease forwards;
+      opacity: 0;
+      transform: translateY(40px);
+      position: relative;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .terms-wrapper h1 {
+      font-size: 5rem;
+      font-weight: 700;
+      color: #e50914;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      text-shadow: 0 0 8px #e50914aa;
+    }
+
+    .terms-wrapper h2 {
+      font-size: 2.4rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e50914cc;
+      text-shadow: 0 0 5px #e50914aa;
+    }
+
+    .terms-wrapper p {
+      font-size: 1.3rem;
+      margin-bottom: 1.4rem;
+      color: #ddd;
+      max-width: 720px;
+      line-height: 1.75;
+      letter-spacing: 0.015em;
+    }
+
+    .toc {
+      background: #222222cc;
+      padding: 1rem 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      box-shadow: inset 0 0 10px #e5091444;
+    }
+    .toc h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #f44336;
+      text-shadow: 0 0 5px #f4433666;
+      text-align: center;
+    }
+    .toc ul {
+      list-style: none;
+      padding-left: 0;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .toc li {
+      margin: 0.6rem 0;
+      font-size: 1.15rem;
+    }
+    .toc a {
+      color: #e50914;
+      font-weight: 600;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+    .toc a:hover, .toc a:focus {
+      color: #ff1a1a;
+      text-shadow: 0 0 8px #ff1a1a;
+      outline: none;
+    }
+
+    footer {
+      background: #181818;
+      padding: 2rem 1rem;
+      text-align: center;
+      font-size: 1.3rem;
+      color: #999;
+      border-top: 1px solid #333;
+      font-family: 'DM Sans', sans-serif;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+      position: relative;
+      z-index: 10;
+    }
+
+    footer nav a {
+      margin: 0 1rem;
+      display: inline-block;
+      color: #e50914;
+      transition: color 0.3s ease, transform 0.2s ease;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    footer nav a:hover, footer nav a:focus {
+      color: #fff;
+      outline: none;
+      text-shadow: 0 0 6px #e50914cc;
+      transform: scale(1.05);
+    }
+
+    /* Back to Top button */
+    #back-to-top {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      background: #e50914;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 0 15px #e50914cc;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      z-index: 100;
+      border: none;
+    }
+    #back-to-top:hover,
+    #back-to-top:focus {
+      background: #ff1a1a;
+      outline: none;
+      box-shadow: 0 0 20px #ff1a1a;
+    }
+    #back-to-top svg {
+      fill: #fff;
+      width: 24px;
+      height: 24px;
+    }
+
+    @media (max-width: 600px) {
+      .terms-wrapper {
+        padding: 2rem 1.5rem 3rem;
+      }
+      .terms-wrapper h1 {
+        font-size: 2.2rem;
+      }
+      .terms-wrapper h2 {
+        font-size: 1.6rem;
+        margin-top: 1.8rem;
+      }
+      .terms-wrapper p {
+        font-size: 1rem;
+      }
+      .toc {
+        max-width: 100%;
+        margin: 0 0 1.5rem;
+      }
+      .toc h2 {
+        font-size: 1.6rem;
+      }
+      .toc ul {
+        max-width: 100%;
+      }
+      footer nav a {
+        margin: 0 0.5rem;
+      }
+      #back-to-top {
+        bottom: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+      }
+      #back-to-top svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header" role="banner">
+    <a href="./index.html" class="logo" aria-label="EverythingCinema homepage">
+      <img src="./assets/images/logo.png" width="160" height="32" alt="EverythingCinema logo" />
+    </a>
+
+    <div class="search-box" search-box>
+      <div class="search-wrapper" search-wrapper>
+        <input
+          type="text"
+          name="search"
+          aria-label="search movies"
+          placeholder="Search any movies..."
+          autocomplete="off"
+          class="search-field"
+          search-field
+        />
+        <img
+          src="./assets/images/search.png"
+          width="24"
+          height="24"
+          alt="search"
+          class="leading-icon"
+        />
+      </div>
+
+      <button class="search-btn" search-toggler>
+        <img
+          src="./assets/images/close.png"
+          width="24"
+          height="24"
+          alt="close search box"
+        />
+      </button>
+    </div>
+
+    <div class="search-btn" search-toggler menu-close>
+      <img
+        src="./assets/images/search.png"
+        width="24"
+        height="24"
+        alt="open search box"
+      />
+    </div>
+
+    <button class="menu-btn" menu-btn menu-toggler aria-label="Toggle menu">
+      <img
+        src="./assets/images/menu.png"
+        width="24"
+        height="24"
+        alt="open menu"
+        class="menu"
+      />
+      <img
+        src="./assets/images/menu-close.png"
+        width="24"
+        height="24"
+        alt="close menu"
+        class="close"
+      />
+    </button>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <article class="terms-wrapper" role="main" aria-labelledby="terms-title">
+      <h1 id="terms-title">Terms of Use</h1>
+
+      <!-- Table of Contents -->
+      <nav class="toc" aria-label="Terms of Use Table of Contents">
+        <h2>Contents</h2>
+        <ul>
+          <li><a href="#use-of-service">1. Use of Service</a></li>
+          <li><a href="#content-ownership">2. Content Ownership</a></li>
+          <li><a href="#user-responsibility">3. User Responsibility</a></li>
+          <li><a href="#privacy">4. Privacy</a></li>
+          <li><a href="#disclaimer">5. Disclaimer</a></li>
+          <li><a href="#changes">6. Changes to Terms</a></li>
+          <li><a href="#contact">7. Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <h2 id="use-of-service">1. Use of Service</h2>
+      <p>
+        EverythingCinema provides free streaming of movies and TV shows for personal, non-commercial use only. By using our service, you agree to comply with all applicable laws and respect intellectual property rights.
+      </p>
+
+      <h2 id="content-ownership">2. Content Ownership</h2>
+      <p>
+        All movies and TV shows available on EverythingCinema are either publicly licensed or provided by third-party sources. We do not claim ownership of any content and do not host or store any videos on our servers.
+      </p>
+
+      <h2 id="user-responsibility">3. User Responsibility</h2>
+      <p>
+        Users are responsible for their own use of the platform. You agree not to misuse the service, distribute illegal content, or engage in any activity that disrupts or harms our service or other users.
+      </p>
+
+      <h2 id="privacy">4. Privacy</h2>
+      <p>
+        We respect your privacy. Please review our <a href="./privacy.html">Privacy Policy</a> to understand how we collect and use your information.
+      </p>
+
+      <h2 id="disclaimer">5. Disclaimer</h2>
+      <p>
+        EverythingCinema is provided "as is" without warranties of any kind. We do not guarantee the availability, accuracy, or reliability of any content streamed through our platform.
+      </p>
+
+      <h2 id="changes">6. Changes to Terms</h2>
+      <p>
+        We reserve the right to update these Terms of Use at any time. Continued use of the service after changes constitutes acceptance of the new terms.
+      </p>
+
+      <h2 id="contact">7. Contact Us</h2>
+      <p>
+        If you have any questions or concerns about these terms, please visit our <a href="./contact.html">Contact Page</a> to get in touch.
+      </p>
+    </article>
+  </main>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button id="back-to-top" aria-label="Back to top" title="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M12 4l-8 8h6v8h4v-8h6z" />
+    </svg>
+  </button>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <nav aria-label="Footer Navigation">
+      <a href="./index.html">Home</a>
+      <a href="./about.html">About Us</a>
+      <a href="./contact.html">Contact</a>
+      <a href="./tv-show-list.html">TV Shows</a>
+      <a href="./movie-list.html">Movies</a>
+      <a href="./terms.html">Terms of Use</a>
+      <a href="./privacy.html">Privacy Policy</a>
+      <a href="./faq.html">FAQ</a>
+      <a href="./404.html">404</a>
+    </nav>
+    <div>© 2025 EverythingCinema. All rights reserved.</div>
+  </footer>
+
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const wrapper = document.querySelector('.terms-wrapper');
+  if (wrapper) {
+    wrapper.style.opacity = '1';
+    wrapper.style.transform = 'translateY(0)';
+  }
+
+  // Back to top button functionality
+  const backToTopBtn = document.getElementById('back-to-top');
+  if (backToTopBtn) {
+    // Initially hide the button
+    backToTopBtn.style.display = 'none';
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      backToTopBtn.blur();
+    });
+
+    // Show/hide back to top button on scroll
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        backToTopBtn.style.display = 'flex';
+      } else {
+        backToTopBtn.style.display = 'none';
+      }
+    });
+  }
+});
+</script>
+
+ </body> 
+ </html>
